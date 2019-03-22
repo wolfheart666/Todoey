@@ -13,6 +13,9 @@ class ToDoListViewController: UITableViewController{
 
     
     var itemArray = [Item]()
+    
+    var selectedCategory : Category? 
+    
     let dataFilePath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first?.appendingPathComponent("Items.plist")
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
